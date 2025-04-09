@@ -1,0 +1,236 @@
+/* UTILITY */
+* {
+  box-sizing: content-box;
+}
+
+.content {
+  padding-top: 6em;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* TOP CONTAINER */
+.topContent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+}
+
+#backgroundVideo {
+  position: relative;
+  left: 10%;
+  width: 100%;
+  opacity: 1;
+}
+
+.overlay {
+  box-sizing: border-box;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  align-items: start;
+  justify-content: flex-start;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgb(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0) 100%
+  ); /* Màu nền của lớp chữ ghi đè */
+}
+
+.mainLogo {
+  position: relative;
+  top: 4em;
+  left: 4em;
+  width: max-content;
+}
+
+.mainLogo img {
+  transition: 0.1s ease;
+  width: 40vw;
+  max-width: 500px;
+}
+
+.paragraph {
+  width: auto;
+}
+.paragraph p {
+  transition: 0.1s ease;
+  width: 55vw;
+  max-width: 650px;
+  color: white;
+  font-size: 2em;
+  margin: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+/* MID CONTAINER */
+.midContent {
+  height: auto;
+  background-color: black;
+}
+
+.Hero {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/* NEWS MARQUEE */
+.marquee {
+  background-color: white;
+  border-radius: 24px 0 0 24px;
+  color: rgb(0, 0, 0);
+  z-index: 1;
+  font-family: "Verdana", Tahoma, sans-serif;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  transform: rotate(180deg);
+}
+
+.marquee p {
+  overflow: hidden;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.marquee p span {
+  font-size: 46px;
+  font-weight: 1000;
+  animation: marquee 4s linear infinite;
+  display: inline-flex;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.main1_content {
+  display: flex;
+  align-items: center;
+  z-index: 0;
+  height: auto;
+}
+
+/* NEW CONTENT */
+
+.newsContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  color: white;
+}
+
+.newsList {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+  gap: 10px;
+  height: 750px;
+  width: auto;
+  left: 10px;
+  top: 10px;
+}
+.newsItem {
+  display: block;
+  align-items: center;
+  height: fit-content;
+  /* transition: transform 1s ease; */
+}
+
+.newsItem img {
+  width: 400px; /* Đặt chiều rộng ảnh là 100% của phần tử cha */
+  height: 600px; /* Tự động tính toán chiều cao dựa trên tỷ lệ khung hình */
+  border-radius: 8px; /* Bo góc ảnh */
+  object-fit: cover; /* Đảm bảo ảnh không bị méo khi thay đổi kích thước */
+}
+
+.newsItem h3 {
+  color: rgb(246, 205, 183);
+  margin-top: 10px; /* Khoảng cách từ ảnh đến tiêu đề tin tức */
+  font-size: 20px; /* Kích thước chữ tiêu đề tin tức */
+  font-weight: bold; /* Đậm chữ tiêu đề tin tức */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.botContent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-x: auto;
+  background-color: black;
+  padding: 4vw 1vw;
+}
+
+/* BOTTOM CONTENT SCROLLBAR */
+.botContent::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+  background-color: black;
+}
+
+.botContent::-webkit-scrollbar-thumb {
+  background-color: orange;
+}
+
+/*Table logo game */
+table {
+  position: relative;
+  border-spacing: 10px;
+  width: 100%;
+  height: 600px;
+}
+
+tr,
+td {
+  border: 3px solid rgb(255, 139, 75);
+  text-align: center;
+  gap: 5px;
+  width: 350px;
+  height: 200px;
+  border-radius: 10px;
+  transition: transform 0.1s ease;
+}
+
+td {
+  padding: 2em 4em;
+  background-color: black;
+}
+
+td img {
+  filter: invert(100%);
+}
+
+tr,
+td img {
+  object-fit: fill;
+  width: 330px;
+  height: auto;
+}
+
+td:hover {
+  background-color: rgb(255, 139, 75);
+  /* border: 3px solid black; */
+  transform: scale(1.1);
+  z-index: 2;
+}

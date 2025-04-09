@@ -1,0 +1,168 @@
+/* FOOTER CONTAINER */
+#Footer {
+  background-color: rgb(255, 139, 75);
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2em 2em;
+  gap: 16px;
+  /* flex-wrap: wrap; */
+}
+
+/* LEFT FOOTER */
+#leftFooter {
+  display: block;
+}
+
+/* LOGO FOOTER */
+#logoFooter {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+#logoFooter img {
+  padding: 0.5em 2em;
+  width: 300px;
+  height: 150px;
+  border-radius: 10%;
+}
+
+/* FOOTER CONTENT */
+#footerContent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+#content1 .about a:hover {
+  color: rgb(246, 205, 183);
+  text-decoration: none;
+
+}
+#content1 #privacy a:hover {
+  text-decoration: none;
+  color: rgb(246, 205, 183);
+}
+#content2 #contact a:hover {
+  text-decoration: none;
+  color: rgb(246, 205, 183);
+}
+#content2 #faq a:hover {
+  text-decoration: none;
+  color: rgb(246, 205, 183);
+}
+
+#footerContent {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 24px;
+}
+
+#footerContent div {
+  margin: 1em 0;
+}
+
+#footerContent div p {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  /* text-align: center; */
+  margin: 1em 0;
+}
+
+/* RIGHT FOOTER */
+#rightFooter {
+  display: block;
+}
+
+#tag {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+}
+
+#iconContact {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 24px;
+}
+
+#content4 {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+#content4 li img {
+  border: 2px solid black;
+  padding: 10px 10px;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+}
+
+#content4 li img:hover {
+  background-color: rgb(246, 205, 183);
+}
+
+#content5 {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+#content5 li img {
+  border: 2px solid black;
+  padding: 10px 10px;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+}
+
+#content4 {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  gap: 30px;
+}
+#content5 {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  gap: 30px;
+}
+
+#iconContact #content5 li img:hover {
+  background-color: rgb(246, 205, 183);
+}
+
+/* COPYRIGHT FOOTER */
+.copyrightFooter {
+  background-color: rgb(255, 139, 75);
+  display: flex;
+  justify-content: center;
+  flex: 1 0 20vw;
+}
+
+.copyrightFooter h6 {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: large;
+  margin: 0;
+  padding: 1em 0;
+}
+
+#content3 {
+  /* background-color: rgb(255, 139, 75); */
+  padding: 0 3em;
+  text-align: center;
+}
+
+/* Dùng font Verdana, Tahoma, sans-serif nha */

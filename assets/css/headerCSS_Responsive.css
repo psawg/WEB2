@@ -1,0 +1,132 @@
+/* 
+==========================================
+    SMALL-LAPTOP USER
+==========================================
+*/
+
+@media only screen and (max-width: 1024px) {
+    /* NAVBAR */
+    .NavBar {
+        transition: 0.1s ease;
+        height: 2em;
+    }
+
+    /* LOGO */
+    .NavBar .logo-container img {
+        width: auto;
+        height: 65px;
+        cursor: pointer;
+    }
+    
+    /* NAVBAR LIST ITEM */
+    .NavBar .item-container ul a {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 1em;
+        padding: 1em;
+        transition: 0.1s ease;
+    }
+}
+
+/* 
+==========================================
+    TABLET USER
+==========================================
+*/
+@media only screen and (max-width: 768px) {
+    /* NAVBAR */
+    .NavBar {
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5em 4vw;
+        width: 93vw;
+    }
+
+    /* Hide List Item Content */
+    /* .NavBar .item-container ul li {
+        display: block;
+    } */
+}
+
+/* Show Hamburger Button */
+@media screen and (max-width: 768px) {
+    .NavBar .item-container .openBtn {
+        display: block;
+        cursor: pointer;
+        padding: 0.5em;
+    }
+    
+    .line {
+        display: block;
+        background-color: black;
+        width: 35px;
+        height: 3px;
+        padding: 0;
+        margin: 6px 0;
+    }
+}
+
+/* Hide Hamburger Button */
+@media screen and (min-width: 769px) {
+    .NavBar .item-container ul li:nth-child(1) {
+        display: none;
+    }
+
+    /* Reset original size */
+    .NavBar .item-container .sideNav {
+        width: auto !important;
+    }
+}
+
+/* SideNav Style */
+@media screen and (max-width: 768px) {
+    .sideNav {
+        display: block !important;
+        height: 91vh;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color:rgb(246, 205, 183);
+        overflow-x: hidden;
+        padding-top: 5em;
+        transition: 0.3s;
+        border-radius: 80px 0 0 80px;
+    }
+
+    .sideNav .closeBtn {
+        width: min-content;
+        position: absolute;
+        top: 1.5em;
+        right: 2em;
+    }
+
+    .sideNav .closeBtn a {
+        padding: 0 !important;
+    }
+
+    .NavBar .item-container ul a{
+        padding: 1.5em 2em;
+    }
+}
+
+/* 
+==========================================
+    MOBILE L USER
+==========================================
+*/
+
+@media only screen and (max-width: 425px) {
+    /* NavBar */
+    .NavBar {
+        padding: 1em 4vw
+    }
+    
+    /* LOGO */
+    .NavBar .logo-container img {
+        height: 45px;
+    }
+}

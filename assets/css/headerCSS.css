@@ -1,0 +1,115 @@
+
+/*
+========================================== 
+UTILITY
+==========================================
+*/
+ 
+* {
+    font-family: 'Verdana', Tahoma, sans-serif;
+}
+
+html {
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+/*
+==========================================
+NAVIGATION BAR
+==========================================
+*/
+.NavBar {
+    box-sizing: content-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 3em;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    gap: 16px;
+    padding: 1.5em 5vw;
+    background-color: rgb(255, 139, 75);
+    z-index: 9999;
+}
+
+.nav-show {
+    top: 0;
+    transition: top 0.3s linear;
+}
+
+.nav-hide {
+    top : -100%;
+    transition: top 0.3s linear;
+}
+/*
+==========================================
+LOGO CONTAINER
+==========================================
+*/
+/* CONTAINER */
+.NavBar .logo-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+/* IMAGE */
+.NavBar .logo-container img {
+    width: auto;
+    height: 85px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.1s ease;
+    /* border: 2px solid black; */
+}
+
+/* 
+==========================================
+LIST ITEM 
+==========================================
+*/
+.NavBar ul {
+    display: flex;
+    gap: 16px;
+}
+
+.NavBar ul a {
+    transition: 0.1s ease;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    padding: 1em;
+    font-weight: 800;
+    font-size: 1.5em;
+}
+
+/* HOVER */
+.NavBar ul a:hover {
+    background-color: rgb(246, 205, 183);
+    color: orange;
+    border-radius: 6px;
+    transition: 0.2s ease;
+}

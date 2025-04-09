@@ -1,0 +1,175 @@
+/* 
+==========================================
+    SMALL-LAPTOP USER
+==========================================
+*/
+@media only screen and (max-width: 1024px) {    
+    .content {
+        padding-top: 5em;
+    }
+    .mainLogo{
+        transition: 0.1s ease;
+        position: relative;
+        top: 4em;
+        left: 4em;
+        width: max-content;
+        height: auto;
+      }
+    
+      .mainLogo img {
+        transition: 0.1s ease;
+        width: 25vw;
+        height: auto;
+        margin: 0;
+    }
+    
+    .paragraph {
+        transition: 0.1s ease;
+        width: 50vw;
+        height: auto;
+        margin: 0;
+    }
+    .paragraph p {
+        transition: 0.1s ease;
+        width: 50vw;
+        height: auto;
+        color: white;
+        font-size: 25px;
+        margin: 0;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .marquee{
+        transition: 0.1s ease;
+        width: auto;
+        height: 60vh;
+        margin: 0;
+    }
+
+    .marquee p span {
+        font-size: 28px;
+    }
+
+    .main1_content{
+        transition: 0.1s ease;
+        width: calc(100vw - 4em);
+        height: 60vh;
+        margin: 0;
+    }
+
+    .newsContent {
+        height: 60vh;
+    }
+
+    .newsList {
+        height: auto;
+    }
+
+    .newsItem {
+        height: inherit;
+    }
+
+    .newsItem img{
+        transition: 0.1s ease;
+        width: 200px;
+        height: 300px;
+        margin: 0;
+    }
+
+    .newsItem h3 {
+        font-size: 12px;
+    }
+
+
+    table{
+        transition: 0.1s ease;
+        width: 30px;
+        height: 70px;
+        margin: 0;
+    }
+    tr, td{
+        transition: 0.1s ease;
+        width: 30vw;
+        height: auto;
+        margin: 0;
+    }
+    tr, td img{
+        transition: 0.1s ease;
+        width: 22vw;
+        height: auto;
+        margin: 0;
+    }
+}
+
+/* 
+==========================================
+    TABLET USER
+==========================================
+*/
+@media only screen and (max-width: 768px) {
+    #backgroundVideo {
+        position: relative;
+        left: 0;
+    }
+    
+    .overlay {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+    
+    .mainLogo {
+        left: 2em;
+        top: 2em;
+    }
+    
+    .mainLogo .paragraph p {
+        font-size: 1em;
+    
+    }
+}
+
+/* 
+==========================================
+    MOBILE-L USER
+==========================================
+*/
+@media only screen and (max-width: 425px) {
+    .content {
+        padding-top: 3.7em;
+    }
+    
+    /* MAIN LOGO */
+    .mainLogo {
+        top: 1em;
+        left: 1em;
+    }
+
+    .mainLogo .paragraph p {
+        font-size: 0.7em;
+    }
+
+
+    /* MID CONTENT */
+    .Hero {
+        height: 445px;
+    }
+    
+    .newsContent {
+        height: auto;
+    }
+    
+    .main1_content {
+        height: auto;
+    }
+    
+    .marquee {
+        height: 445px;
+    }
+    
+    .marquee p {
+
+    }
+    
+    .marquee p span {
+        font-size: 1.5em;
+    }
+}

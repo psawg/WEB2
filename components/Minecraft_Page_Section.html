@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/afb28339ee.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5ea815c1d0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/Minecraft_PageCSS.css"></link>
+</head>
+<body>
+    <main>
+        <div class="content-wrapper">
+                <!-- Tạo button cuộn trang -->
+            <button onclick="scrollToTop()" id="scrollToTopBtn">
+                UP
+                <i class="fa-regular fa-circle-up"></i>
+            </button>
+
+            <!-- Ảnh banner -->
+            <section id="banner-image">
+                <img src="/assets/images/img_page_Minecraft/minecraft_banner.png" alt="Minecraft Banner">
+            </section>
+
+            <!-- Tên game -->
+            <section id="info-game-container">
+                        <h1 style="color: brown; font-weight: bold;">Minecraft - v1.14.4</h1>
+                        <h6>
+                            14/12/2023 •
+                            Chủ đề: Sandbox, Thế giới mở, Phiêu lưu
+                        </h6>
+                    <hr>
+            </section>
+            <section id="paragraph">
+                <h1>Giới thiệu</h1>
+                <p>
+                    <span style="color: brown; font-weight: bold;">
+                        Minecraft</span> là một trò chơi về cách đặt khối và phiêu lưu. 
+                        Khám phá và tham quan những thế giới sáng tạo tuyệt vời của cộng đồng, Minecraft tựa game sinh tồn trong một thế giới Zombie, 
+                        bạn sẽ nhập vai thành nhân vật Steve, bạn sẽ được đưa vào một thế giới ô vuông với nhiều sinh vật khác nhau!
+                        Bạn phải chặt cây, đào đá, làm mọi thứ để sinh sống trong thế giới này.
+                
+                </p>
+            </section>
+            <section id="trailer-holder">
+                <div>
+                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/MmB9b5njVbA?si=rhRQywg5uUWYbJgt" title="Minecraft trailer"
+                     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </section>
+            
+            <section id="paragraph">
+                <h1>Gameplay trò chơi PC</h1>
+                <p>Minecraft là một trò chơi thế giới mở không có một mục đích nhất định để cho người chơi thực hiện,</p>
+                điều đó cho phép người chơi tự do lựa chọn hàng nghìn cách chơi khác nhau. Tuy nhiên nó có một hệ thống thành tựu mà người chơi có thể đạt.</p>
+                Gameplay mặc định là người chơi thứ nhất, nhưng người chơi có thể lựa chọn chơi ở chế độ người chơi thứ 2 và thứ 3.</p>
+            </section>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+            <!--fullwidth ảnh với number text -->
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="/assets/images/img_page_Minecraft/minecraft_1.png" style="width:100%">
+                </div>
+            
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                  <img src="/assets/images/img_page_Minecraft/minecraft_2.png" style="width:100%">
+                </div>
+            
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                  <img src="/assets/images/img_page_Minecraft/minecraft_3.png" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="/assets/images/img_page_Minecraft/minecraft_4.png" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="/assets/images/img_page_Minecraft/minecraft_5.png" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="/assets/images/img_page_Minecraft/minecraft_6.png" style="width:100%">
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img class="demo" src="/assets/images/img_page_Minecraft/minecraft_1.png" style="width:100%" onclick="currentSlide(1)" alt="Ocean in Minecraft">
+                    </div>
+                    <div class="column">
+                        <img class="demo" src="/assets/images/img_page_Minecraft/minecraft_2.png" style="width:100%" onclick="currentSlide(2)" alt="Gameplay">
+                    </div>
+                    <div class="column">
+                        <img class="demo" src="/assets/images/img_page_Minecraft/minecraft_3.png" style="width:100%" onclick="currentSlide(3)" alt="Multiplayer">
+                    </div>
+                    <div class="column">
+                        <img class="demo" src="/assets/images/img_page_Minecraft/minecraft_4.png" style="width:100%" onclick="currentSlide(4)" alt="Mobs in Minecraft">
+                    </div>
+                    <div class="column">
+                        <img class="demo" src="/assets/images/img_page_Minecraft/minecraft_5.png" style="width:100%" onclick="currentSlide(5)" alt="Go fishing">
+                    </div>
+                    <div class="column">
+                        <img class="demo" src="/assets/images/img_page_Minecraft/minecraft_6.png" style="width:100%" onclick="currentSlide(6)" alt="Go mining">
+                    </div>
+                </div>
+                <h6>Một số hình ảnh trong game</h6>
+            </div>
+            <section id="paragraph">
+                <p>Cốt lõi của game xoay quanh việc đặt và phá block. Bản chất thế giới được tạo từ nhiều vật 3D – chủ yếu là khối lập phương – được sắp xếp một chỗ nhất định theo một mạng lưới và được chia thành nhiều vật liệu như đất, đá, quặng, nước và thân cây.</p>
+                <p> Trong khi người chơi có thể di chuyển tự do khắp thế giới, vật và đồ chỉ đặt được chỗ nhất định. Người chơi có thể thu những khối vật liệu này và đặt chúng ở chỗ khác điều này cho phép xây dựng nhiều công trình khác nhau.</p>
+            </section>
+
+            <section id="paragraph">
+                <h1>Tổng kết</h1>
+                <p>Minecraft không chỉ là một trò chơi, mà là một thế giới mà bạn có thể khám phá và tạo ra những điều kỳ diệu. Bạn có thể chơi một mình hoặc kết nối với cộng đồng để chia sẻ sáng tạo và khám phá thế giới lập phương này. Hãy sẵn sàng đắm chìm vào thế giới Minecraft, 
+                    nơi cuộc phiêu lưu không có giới hạn!</p>
+            </section>
+
+            <section id="star-rating">
+                <p style="font-size: small;">Bài viết có hữu ích không?</p>
+                <div class="star-wrapper">
+                    <a href="#" class="fas fa-star s1"></a>
+                    <a href="#" class="fas fa-star s2"></a>
+                    <a href="#" class="fas fa-star s3"></a>
+                    <a href="#" class="fas fa-star s4"></a>
+                    <a href="#" class="fas fa-star s5"></a>
+                </div>
+            </section>
+            
+            <section id="another-blog">
+                <h1 style="color: brown;">Các bài đăng khác</h1>
+                    <div class="another-blog-content">
+                        <a href="/page/RedDead_Page.html">
+                            <img src="/assets/images/img_news/RDR2.jpg" alt="another-blog">
+                            <h6>Review Red Dead Redemption 2 : Gã cao bồi hết thời và hành trình đi tìm bản ngã</h6>
+                        </a>
+                        <a href="/page/GTA_V_Page.html">
+                            <img src="/assets/images/img_news/GTA5.jpg" alt="another-blog">
+                            <h6>Tất tần tật về GTA 5: Trailer trình làng sớm hơn dự kiến sau 1 thập kỷ chờ đợi</h6>
+                        </a>
+                        <a href="/page/ARK.html">
+                            <img src="/assets/images/img_news/ARK.jpg" alt="another-blog">
+                            <h6>ARK: Survival Evolved Review</h6>
+                        </a>
+                    </div>
+            </section>
+        </div>
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/scripts/news_pageJS.js"></script>
+</body>
+</html>

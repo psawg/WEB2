@@ -1,0 +1,40 @@
+@media screen and (max-width: 768px) {
+    #Footer {
+      flex-direction: column;
+    }
+  
+    #leftFooter {
+      margin-bottom: 20px;
+    }
+  
+    #logoFooter {
+      text-align: center;
+    }
+  
+    #footerContent {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .content1,
+    .content2 {
+      margin-bottom: 10px;
+    }
+  
+    #content3 {
+      text-align: center;
+    }
+  
+    #rightFooter {
+      text-align: center;
+    }
+  
+    #iconContact {
+      gap: 8px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+  }
