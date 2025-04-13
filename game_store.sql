@@ -3,13 +3,13 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 22, 2025 lúc 05:14 AM
+-- Thời gian đã tạo: Th4 13, 2025 lúc 06:44 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
--- Phiên bản PHP: 8.0.30
+-- Phiên bản PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
-SET time_zone = '+00:00';
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -61,6 +61,25 @@ CREATE TABLE `developers` (
   `founded_year` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `developers`
+--
+
+INSERT INTO `developers` (`developer_id`, `name`, `website`, `founded_year`) VALUES
+(1, 'NeoGames Studio', 'https://neogames.example.com', 2015),
+(2, 'SunnyFarm Devs', 'https://sunnyfarm.example.com', 2018),
+(3, 'GalaxyTech', 'https://galaxytech.example.com', 2020),
+(4, 'FromSoftware', 'https://www.fromsoftware.jp', 1986),
+(5, 'Toby Fox', 'https://tobyfox.com', 2015),
+(6, 'BlueTwelve Studio', 'https://www.bluetwelve.com', 2016),
+(7, 'Capcom', 'https://www.capcom.com', 1979),
+(8, 'ConcernedApe', 'https://www.stardewvalley.net', 2012),
+(9, 'Supergiant Games', 'https://www.supergiantgames.com', 2009),
+(10, 'Team Cherry', 'https://www.teamcherry.com.au', 2015),
+(11, 'Mojang Studios', 'https://www.minecraft.net', 2009),
+(12, 'CD Projekt Red', 'https://en.cdprojektred.com', 2002),
+(13, 'Rockstar Games', 'https://www.rockstargames.com', 1998);
+
 -- --------------------------------------------------------
 
 --
@@ -105,6 +124,24 @@ CREATE TABLE `games` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `games`
+--
+
+INSERT INTO `games` (`game_id`, `title`, `description`, `price`, `release_date`, `developer_id`, `platform`, `cover_image`, `trailer_url`, `created_at`) VALUES
+(6, 'Bloodborne', 'An action RPG set in a gothic, horror-filled city.', 49.99, '2015-03-24', NULL, 'Console', NULL, NULL, '2025-04-12 01:09:29'),
+(7, 'Deltarune', 'A role-playing game by Toby Fox.', 0.00, '2018-10-31', 4, 'Windows', NULL, NULL, '2025-04-12 01:09:29'),
+(8, 'Stray', 'Play as a stray cat in a cyberpunk world.', 29.99, '2022-07-19', 5, 'Windows', NULL, NULL, '2025-04-12 01:09:29'),
+(9, 'Monster Hunter', 'Hunt giant monsters in epic environments.', 59.99, '2018-01-26', 6, 'Windows', NULL, NULL, '2025-04-12 01:09:29'),
+(10, 'Stardew Valley', 'A farming simulation and role-playing game.', 14.99, '2016-02-26', 7, 'Windows', NULL, NULL, '2025-04-12 01:09:29'),
+(11, 'Hades', 'A rogue-like dungeon crawler by Supergiant Games.', 24.99, '2020-09-17', 8, 'Windows', NULL, NULL, '2025-04-12 01:09:29'),
+(12, 'Hollow Knight', 'A challenging action-adventure in a dark world.', 14.99, '2017-02-24', 9, 'Windows', NULL, NULL, '2025-04-12 01:09:29'),
+(13, 'Undertale', 'A role-playing game where no one has to die.', 9.99, '2015-09-15', 4, 'Windows', NULL, NULL, '2025-04-12 01:09:29'),
+(14, 'Minecraft', 'Build, mine, and survive in a sandbox world.', 26.95, '2011-11-18', 10, 'Windows', NULL, NULL, '2025-04-12 01:09:29'),
+(15, 'Resident Evil', 'A survival horror franchise.', 59.99, '1996-03-22', 11, 'Windows', NULL, NULL, '2025-04-12 01:09:29'),
+(16, 'GTA', 'Open-world action-adventure crime game.', 59.99, '2013-09-17', 12, 'Windows', NULL, NULL, '2025-04-12 01:09:29'),
+(17, 'Cyberpunk', 'Futuristic RPG in Night City.', 59.99, '2020-12-10', 13, 'Windows', NULL, NULL, '2025-04-12 01:09:29');
+
 -- --------------------------------------------------------
 
 --
@@ -115,6 +152,36 @@ CREATE TABLE `game_genres` (
   `game_id` int(11) NOT NULL,
   `genre_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `game_genres`
+--
+
+INSERT INTO `game_genres` (`game_id`, `genre_id`) VALUES
+(6, 1),
+(6, 3),
+(7, 2),
+(7, 3),
+(8, 2),
+(8, 4),
+(9, 1),
+(9, 3),
+(10, 4),
+(10, 5),
+(11, 1),
+(11, 3),
+(12, 1),
+(12, 8),
+(13, 2),
+(13, 3),
+(14, 4),
+(14, 5),
+(15, 1),
+(15, 10),
+(16, 1),
+(16, 2),
+(17, 1),
+(17, 3);
 
 -- --------------------------------------------------------
 
@@ -130,6 +197,24 @@ CREATE TABLE `game_keys` (
   `purchase_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `game_keys`
+--
+
+INSERT INTO `game_keys` (`key_id`, `game_id`, `license_key`, `status`, `purchase_id`) VALUES
+(1, 6, 'BBRN-1234-ABCD-5678', 'Available', NULL),
+(2, 7, 'DLTR-2233-XYZA-8899', 'Available', NULL),
+(3, 8, 'STRY-3344-QWER-7788', 'Available', NULL),
+(4, 9, 'MHNT-4455-ASDF-6677', 'Available', NULL),
+(5, 10, 'SDVL-5566-ZXCV-5566', 'Available', NULL),
+(6, 11, 'HADS-6677-TYUI-4455', 'Available', NULL),
+(7, 12, 'HLKT-7788-GHJK-3344', 'Available', NULL),
+(8, 13, 'UNDL-8899-UIOP-2233', 'Available', NULL),
+(9, 14, 'MCFT-9900-PLKM-1122', 'Available', NULL),
+(10, 15, 'REVL-0001-BNMJ-0011', 'Available', NULL),
+(11, 16, 'GTAV-1112-VCXD-2223', 'Available', NULL),
+(12, 17, 'CBPK-2223-QAZX-3334', 'Available', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -140,6 +225,30 @@ CREATE TABLE `genres` (
   `genre_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `genres`
+--
+
+INSERT INTO `genres` (`genre_id`, `name`) VALUES
+(1, 'Action'),
+(2, 'Adventure'),
+(11, 'Fighting'),
+(10, 'Horror'),
+(17, 'MMORPG'),
+(16, 'Music'),
+(13, 'Platformer'),
+(7, 'Puzzle'),
+(8, 'Racing'),
+(3, 'Role-Playing'),
+(14, 'Sandbox'),
+(9, 'Shooter'),
+(4, 'Simulation'),
+(6, 'Sports'),
+(15, 'Stealth'),
+(5, 'Strategy'),
+(12, 'Survival'),
+(18, 'Visual Novel');
 
 -- --------------------------------------------------------
 
@@ -194,6 +303,19 @@ CREATE TABLE `payment_methods` (
   `method_id` int(11) NOT NULL,
   `method_name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `payment_methods`
+--
+
+INSERT INTO `payment_methods` (`method_id`, `method_name`) VALUES
+(6, 'Apple Pay'),
+(4, 'Bank Transfer'),
+(5, 'Cash on Delivery'),
+(1, 'Credit Card'),
+(2, 'Debit Card'),
+(7, 'Google Pay'),
+(3, 'PayPal');
 
 -- --------------------------------------------------------
 
@@ -383,7 +505,7 @@ ALTER TABLE `account`
 -- AUTO_INCREMENT cho bảng `developers`
 --
 ALTER TABLE `developers`
-  MODIFY `developer_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `developer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT cho bảng `function`
@@ -395,19 +517,19 @@ ALTER TABLE `function`
 -- AUTO_INCREMENT cho bảng `games`
 --
 ALTER TABLE `games`
-  MODIFY `game_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `game_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT cho bảng `game_keys`
 --
 ALTER TABLE `game_keys`
-  MODIFY `key_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `key_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT cho bảng `genres`
 --
 ALTER TABLE `genres`
-  MODIFY `genre_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `genre_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT cho bảng `module`
@@ -431,7 +553,7 @@ ALTER TABLE `payments`
 -- AUTO_INCREMENT cho bảng `payment_methods`
 --
 ALTER TABLE `payment_methods`
-  MODIFY `method_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `method_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `purchases`
