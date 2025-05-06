@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="icon" href="/assets/images/icon_miniLogoHome.png">
-    <script language="JavaScript" src="/scripts/signup.js"></script>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" href="../assets/images/icon_miniLogoHome.png">
+    <script language="JavaScript" src="../scripts/signup.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
     <title>Account Center</title>
     <style>
@@ -24,7 +24,7 @@
     <div class="main">
         <div class="content">
             <div class="avatar">
-                <img src="/assets/images/icon_logoHome.png" alt="avatar">
+                <img src="../assets/images/icon_logoHome.png" alt="avatar">
                 <h1>Sign Up</h1>
             </div>
         
@@ -42,12 +42,12 @@
             </div>
             
             <div class="logo">
-                <div class="logoimg"><img src="/assets/images/icon_facebook.png" alt="facebook"></div>
-                <div class="logoimg"><img src="/assets/images/icon_discord.png" alt="discord"></div>
-                <div class="logoimg"><img src="/assets/images/icon_instagram.png" alt="instagram"></div>
+                <div class="logoimg"><img src="../assets/images/icon_facebook.png" alt="facebook"></div>
+                <div class="logoimg"><img src="../assets/images/icon_discord.png" alt="discord"></div>
+                <div class="logoimg"><img src="../assets/images/icon_instagram.png" alt="instagram"></div>
             </div>
         
-            <div > <a href="/page/login.html" style="color: black;text-decoration: none;">
+            <div > <a href="login.php" style="color: black;text-decoration: none;">
               <p>I have an Account</p>
 
             </a> 

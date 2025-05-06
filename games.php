@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="./assets/css/FooterCSS.css" />
     <link rel="stylesheet" href="./assets/css/FooterCSS_Responsive.css" />
+    <link rel="stylesheet" href="./assets/css/games.css" />
 <!-- 
     <?php 
         require_once "./php/echoHTML.php";
@@ -30,21 +31,14 @@
       <?php
         headerHTML();
       ?>
-
-      <?php
-        sectionHTML();
-      ?>
-
-      <?php
-        footerHTML();
-      ?>
-
+    <section id="gameSection" class="game-section">
+    <h2 class="game-title">Danh sách game</h2>
+    <div id="gameList" class="game-list"></div>
+    <div id="pagination" class="pagination"></div>
+    </section>      
     <!-- <script defer src="./assets/js/HomeJS.js"></script> -->
-    <script defer src="./assets/js/FooterJS.js"></script>
     <script defer src="./assets/js/HeaderJS.js"></script>
-    <script defer src="./assets/js/SectionJS.js"></script>
     <script defer src="./scripts/ScrollbarJS.js"></script>
     <script src="./assets/js/IntroJS.js"></script>
-    <script src="./js/log.js"></script>   
   </body>
 </html>

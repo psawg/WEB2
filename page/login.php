@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="icon" href="/assets/images/icon_miniLogoHome.png">
-    <script language="JavaScript" src="/scripts/login.js"></script>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" href="../assets/images/icon_miniLogoHome.png">
+    <script language="JavaScript" src="../scripts/login.js"></script>
     <title>Account Center</title>
     <style>
         body {
@@ -23,7 +23,7 @@
     <div class="main">
         <div class="content">
             <div class="avatar">
-                <img src="/assets/images/icon_logoHome.png" alt="avatar">
+                <img src="../assets/images/icon_logoHome.png" alt="avatar">
                 <h1>Login</h1>
             </div>
         
@@ -46,12 +46,12 @@
             </div>
             
             <div class="logo">
-                <div class="logoimg"><img src="/assets/images/icon_facebook.png" alt="facebook"></div>
-                <div class="logoimg"><img src="/assets/images/icon_discord.png" alt="discord"></div>
-                <div class="logoimg"><img src="/assets/images/icon_instagram.png" alt="instagram"></div>
+                <div class="logoimg"><img src="../assets/images/icon_facebook.png" alt="facebook"></div>
+                <div class="logoimg"><img src="../assets/images/icon_discord.png" alt="discord"></div>
+                <div class="logoimg"><img src="../assets/images/icon_instagram.png" alt="instagram"></div>
             </div>
         
-            <div ><a href="/page/signup.html" style="color: black;text-decoration: none;">
+            <div ><a href="./signup.php" style="color: black;text-decoration: none;">
               <p>Create an Account</p>
             </a>
             </div>

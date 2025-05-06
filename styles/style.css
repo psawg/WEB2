@@ -30,7 +30,6 @@ body {
 .content{
   /* width: 25vw; */
   min-width: 360px;
-  height: 60vh;
   /* gap: 24px; */
   display: flex;
   flex-direction: column;
