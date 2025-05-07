@@ -1,64 +1,180 @@
+/* Vùng chứa danh sách game */
 .game-section {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-    transform: translateY(100px);
+  padding: 40px 20px;
+  background-color: #484848;
+  text-align: center;
+  transform: translateY(100px);
+}
 
+/* Tiêu đề danh sách */
+.game-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ff8b4b;
 }
-  
-  .game-title {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #2E7D32;
+
+/* ★ Filter Bar: tìm kiếm + sắp xếp */
+.game-section .filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
 }
-  
-  .game-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 10px;
+
+/* ★ Ô tìm kiếm */
+#searchGame {
+  width: 250px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
-  
-  .game-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
+
+#searchGame:focus {
+  border-color: #ff8b4b;
+  box-shadow: 0 0 5px rgba(255, 139, 75, 0.3);
 }
-  
-  .game-card:hover {
-    transform: scale(1.05);
+
+/* ★ Select sắp xếp */
+#sortPrice {
+  width: 180px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  appearance: none; /* Ẩn mũi tên mặc định */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8'%3E%3Cpath fill='%23999' d='M1 1l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 14px 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
 }
-  
-  .game-card img {
+
+#sortPrice:focus {
+  border-color: #ff8b4b;
+  box-shadow: 0 0 5px rgba(255, 139, 75, 0.3);
+}
+
+/* Lưới game */
+#gameList {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Card game */
+.game-item {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(30% - 8px);
+  height: 300px;
+}
+
+.game-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Ảnh game */
+.game-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Tên game */
+.game-item h3 {
+  font-size: 1.1rem;
+  color: #2E7D32;
+  margin: 10px 0 5px;
+}
+
+/* Mô tả game */
+.game-item p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Giá */
+.game-item p:last-child {
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+/* Nút thêm giỏ hàng */
+.btn-add-cart {
+  margin-top: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #2e7d32;
+  transition: color 0.2s;
+}
+
+.btn-add-cart:hover {
+  color: #d32f2f;
+}
+
+/* Phân trang */
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination button {
+  padding: 8px 14px;
+  margin: 0 5px;
+  font-size: 16px;
+  background: #A5D6A7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #81c784;
+}
+
+.pagination button.active {
+  background-color: #2E7D32;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .game-item {
+    width: calc(45% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .game-item {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
+  }
+  .game-section .filter-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+  #searchGame,
+  #sortPrice {
+    width: 100%;
+    max-width: 300px;
+  }
 }
-  
-  .game-card h3 {
-    padding: 10px;
-    font-size: 18px;
-    color: #333;
-}
-  
-  .pagination {
-    margin-top: 20px;
-}
-  
-  .pagination button {
-    padding: 8px 14px;
-    margin: 0 5px;
-    font-size: 16px;
-    background: #A5D6A7;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-  
-  .pagination button.active {
-    background-color: #2E7D32;
-    color: white;
-}
-  
